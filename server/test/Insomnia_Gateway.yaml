@@ -1,0 +1,656 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: KeepFlowerAlive
+meta:
+  id: wrk_d1b7d8c4bc11405e9d18b7964a203522
+  created: 1777924570267
+  modified: 1777924570267
+  description: ""
+collection:
+  - name: home
+    meta:
+      id: fld_0050e5fac3f24caf8fb70c8e969fb181
+      created: 1714262400000
+      modified: 1714262400000
+      sortKey: -800
+      description: ""
+    children:
+      - url: "{{ base_url }}/home/load"
+        name: home/load
+        meta:
+          id: req_31ea4c26119942109877f4b69e2dc367
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -1000
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "<house_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/home/create"
+        name: home/create
+        meta:
+          id: req_3e0d256259e142b6b300fa4e27fa568b
+          created: 1714262400000
+          modified: 1777926500921
+          isPrivate: false
+          description: ""
+          sortKey: -1100
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"ownerId": "<owner_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/home/removeMember"
+        name: home/removeMember
+        meta:
+          id: req_a8c820e5ff90498ab4ba5663197159c7
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -700
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"houseId": "<house_id>",
+            	"memberId": "<member_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/home/addMember"
+        name: home/addMember
+        meta:
+          id: req_bde530147d564ec19401d3786468a2ef
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -800
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"houseId": "<house_id>",
+            	"memberId": "<member_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/home/list"
+        name: home/list
+        meta:
+          id: req_c4679d6d643142e2bf940df12ad360cf
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -900
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: device
+    meta:
+      id: fld_7067218b4e9b4005a58f53443b715e70
+      created: 1714262400000
+      modified: 1714262400000
+      sortKey: -900
+      description: ""
+    children:
+      - url: "{{ base_url }}/device/create"
+        name: device/create
+        meta:
+          id: req_7d7838fba3e44b7fa05cb7926e078558
+          created: 1714262400000
+          modified: 1777926499589
+          isPrivate: false
+          description: ""
+          sortKey: -1000
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"roomId": "<room_id>",
+            	"status": "active"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/device/delete"
+        name: device/delete
+        meta:
+          id: req_9b74a759193b492ab5b03619370d9d0f
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -900
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "<device_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: flower
+    meta:
+      id: fld_75b0e0f8b67e4c3fbb2f639bf6fcc787
+      created: 1714262400000
+      modified: 1714262400000
+      sortKey: -1000
+      description: ""
+    children:
+      - url: "{{ base_url }}/flower/list"
+        name: flower/list
+        meta:
+          id: req_5524501768054286a4de6521939cc427
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -900
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/flower/update"
+        name: flower/update
+        meta:
+          id: req_60bec6a676ba4ba499e2e41abbdb7dd3
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -800
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "<flower_id>",
+            	"name": "Rose Updated",
+            	"description": "Updated description",
+            	"minTemp": 10,
+            	"maxTemp": 30
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/flower/delete"
+        name: flower/delete
+        meta:
+          id: req_d93ccf34b8884eebbdc2f13583b91995
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -700
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "<flower_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/flower/create"
+        name: flower/create
+        meta:
+          id: req_f86ae50386de484e917e21a5535276f5
+          created: 1714262400000
+          modified: 1777926494559
+          isPrivate: false
+          description: ""
+          sortKey: -1000
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: name
+              value: Rose
+              type: text
+            - name: description
+              value: Beautiful red flower
+              type: text
+            - name: minTemp
+              value: "15"
+              type: text
+            - name: maxTemp
+              value: "25"
+              type: text
+            - name: image
+              value: ""
+              type: file
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: measurement
+    meta:
+      id: fld_df1d767f096546a1af791d4136e82c47
+      created: 1714262400000
+      modified: 1714262400000
+      sortKey: -600
+      description: ""
+    children:
+      - url: "{{ base_url }}/measurement/getLatest"
+        name: measurement/getLatest
+        meta:
+          id: req_5d44d7be28d84052afd7ddca7d6bdc65
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -1000
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"roomId": "<room_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/measurement/list"
+        name: measurement/list
+        meta:
+          id: req_895b0742f20e4a2cafc15c2ad995328c
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -900
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"roomId": "<room_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/measurement/create"
+        name: measurement/create
+        meta:
+          id: req_b6a0c64e814947359abceb2a0a672a70
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -800
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"roomId": "<room_id>",
+            	"value": 22.5,
+            	"unit": "C"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: room
+    meta:
+      id: fld_ed7cb02f178b4594a846bdadd061cb54
+      created: 1714262400000
+      modified: 1714262400000
+      sortKey: -700
+      description: ""
+    children:
+      - url: "{{ base_url }}/room/addFlower"
+        name: room/addFlower
+        meta:
+          id: req_062830e2d47a4d54b2be8206650fc032
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -700
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"roomId": "<room_id>",
+            	"flowerId": "<flower_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/room/create"
+        name: room/create
+        meta:
+          id: req_1f18287ae9474d90853ec88eeaea0eaf
+          created: 1714262400000
+          modified: 1777926556191
+          isPrivate: false
+          description: ""
+          sortKey: -1000
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Living Room",
+            	"houseId": "69f9018094b35cc223fe871a"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/room/update"
+        name: room/update
+        meta:
+          id: req_4450dbbe36d646c9913eaef0be35f56e
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -900
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "<room_id>",
+            	"name": "Updated Living Room"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/room/removeFlower"
+        name: room/removeFlower
+        meta:
+          id: req_5649c7965d60405d942f801ca3bf885e
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -600
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"roomId": "<room_id>",
+            	"flowerId": "<flower_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/room/delete"
+        name: room/delete
+        meta:
+          id: req_9449bb8f9bb64cab939b7d92bf9b3d4e
+          created: 1714262400000
+          modified: 1714262400000
+          isPrivate: false
+          description: ""
+          sortKey: -800
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "<room_id>"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: gateway
+    meta:
+      id: fld_c977321b284d469a8a252b50ea1d69d1
+      created: 1777924645130
+      modified: 1777924655873
+      sortKey: -1777924645130
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/gateway/create"
+        name: gateway/create
+        meta:
+          id: req_32c8a515b0fb4454ac98d267c14fbab4
+          created: 1777924663819
+          modified: 1777968794550
+          isPrivate: false
+          description: ""
+          sortKey: -1777924663819
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "roomId": "69f9019d94b35cc223fe871b",
+              "uniqueGatewayId": "gateway-001",
+              "apiKey": "abc123",
+              "status": "ONLINE"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/gateway/measurement"
+        name: gateway/measurement
+        meta:
+          id: req_37e44259b8b645ec98e5bc32a88b7794
+          created: 1777925472877
+          modified: 1777968816853
+          isPrivate: false
+          description: ""
+          sortKey: -1777925472877
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "uniqueDeviceId": "test-device-001",
+              "temperature": 22,
+              "measuredAt": "2026-05-04T20:35:00.000Z"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+          - name: x-api-key
+            value: abc123
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_940acf4f32556f6e54f7a801c349e0ea0d07e2e4
+    created: 1777924572212
+    modified: 1777924572212
+environments:
+  name: Base Environment
+  meta:
+    id: env_d908d73cdec1459aaefd21aad8aff2af
+    created: 1714262400000
+    modified: 1714262400000
+    isPrivate: false
+  data:
+    base_url: http://localhost:3000
