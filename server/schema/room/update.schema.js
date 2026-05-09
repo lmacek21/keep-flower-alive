@@ -1,9 +1,0 @@
-module.exports = {
-  type: "object",
-  properties: {
-    id: { type: "string", minLength: 1 },
-    name: { type: "string", minLength: 1 },
-  },
-  required: ["id"],
-  additionalProperties: false,
-};
