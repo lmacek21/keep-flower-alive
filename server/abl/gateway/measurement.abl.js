@@ -30,12 +30,26 @@ async function receiveGatewayMeasurement(req, res) {
             });
         }
 
-        const measuredAt = body.measuredAt ? new Date(body.measuredAt) : new Date();
+        const existingMeasurement = await MeasurementDao.getByMeasurementId(
+            body.measurementId,
+        );
+
+        if (existingMeasurement) {
+            return res.status(200).json({
+                message: "Measurement already received",
+                data: existingMeasurement,
+            });
+        }
+
+        const measuredAt = new Date(body.measuredAt);
 
         const measurement = await MeasurementDao.create({
+            measurementId: body.measurementId,
             roomId: gateway.roomId,
+            uniqueDeviceId: body.uniqueDeviceId,
             value: body.temperature,
             unit: "C",
+            measuredAt,
         });
 
         await GatewayDao.updateLatestData(gateway._id, measuredAt);
@@ -46,14 +60,13 @@ async function receiveGatewayMeasurement(req, res) {
                 gatewayId: gateway._id,
                 uniqueGatewayId: gateway.uniqueGatewayId,
                 uniqueDeviceId: body.uniqueDeviceId,
-                measurementId: measurement._id,
+                measurementId: measurement.measurementId,
                 roomId: gateway.roomId,
                 temperature: measurement.value,
                 unit: measurement.unit,
-                measuredAt: measurement.createdAt,
+                measuredAt: measurement.measuredAt,
             },
         });
-
     } catch (err) {
         return res.status(500).json({
             error: "Internal server error",
