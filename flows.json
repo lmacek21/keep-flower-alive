@@ -1,0 +1,1453 @@
+[
+    {
+        "id": "d5d35f15d2cd9082",
+        "type": "tab",
+        "label": "UART to MQTT Bridge",
+        "disabled": false,
+        "info": "I am using UART instead of MQTT",
+        "env": []
+    },
+    {
+        "id": "98080d677c245485",
+        "type": "tab",
+        "label": "Downsampling",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c52bfddb800235a9",
+        "type": "tab",
+        "label": "Gateway Measurement Ingestion",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cd0384401b063155",
+        "type": "tab",
+        "label": "Create Retry Queue",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1ad3d5903d2e6a7a",
+        "type": "tab",
+        "label": "Retry Upload Worker",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7656f99e067445ba",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "29fba84a.b2af58",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "25f6788fcc3dab9a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1f5229f7700c7237",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "917f2cc428c2b730",
+        "type": "global-config",
+        "env": [
+            {
+                "name": "HOUSE_SECRET",
+                "value": "7eb9f60c9471bc0c01bbe6564ed71872747919ca61c43203",
+                "type": "str"
+            }
+        ],
+        "modules": {
+            "node-red-node-serialport": "2.0.3",
+            "node-red-node-sqlite": "2.0.1",
+            "node-red-dashboard": "3.6.6"
+        }
+    },
+    {
+        "id": "0c73519dfdf663e7",
+        "type": "serial-port",
+        "name": "HARDWARIO",
+        "serialport": "COM3",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "aa11a45c3579292f",
+        "type": "sqlitedb",
+        "db": "C:\\Users\\Victus\\Desktop\\Unicorn UNI\\Second_Year\\IoT\\Nodered\\nodred.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "bf6a3c96.35048",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "11207769.c31889",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard"
+    },
+    {
+        "id": "57ff470b.93fdf8",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "11207769.c31889",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "0d7972870f83c48f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e2a41c6c5453705a",
+        "type": "sqlitedb",
+        "db": "/data/gateway_retry_queue.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "73f23b6f88ee366b",
+        "type": "function",
+        "z": "d5d35f15d2cd9082",
+        "name": "Convert To MQTT",
+        "func": "const data = JSON.parse(msg.payload);\n\nconst rawTopic = data[0];\nconst value = data[1];\n\nmsg.topic = `node/${rawTopic}`;\n\nmsg.payload = value;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "2b1fd8badb9e7592"
+            ]
+        ]
+    },
+    {
+        "id": "2b1fd8badb9e7592",
+        "type": "mqtt out",
+        "z": "d5d35f15d2cd9082",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1f5229f7700c7237",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "155923acdf19a664",
+        "type": "serial in",
+        "z": "d5d35f15d2cd9082",
+        "name": "HARDWARIO Radio Dongle",
+        "serial": "0c73519dfdf663e7",
+        "x": 240,
+        "y": 140,
+        "wires": [
+            [
+                "73f23b6f88ee366b"
+            ]
+        ]
+    },
+    {
+        "id": "bd32a44a8c12cb78",
+        "type": "mqtt in",
+        "z": "98080d677c245485",
+        "name": "",
+        "topic": "node/+/thermometer/+/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1f5229f7700c7237",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "f5ad3b0f61654b49"
+            ]
+        ]
+    },
+    {
+        "id": "9ad976af50354842",
+        "type": "function",
+        "z": "98080d677c245485",
+        "name": "Store Temp Values",
+        "func": "// const topicParts = msg.topic.split(\"/\");\n// const sensorId = topicParts[1];\n// const temperature = Number(msg.payload);\n\n// if (Number.isNaN(temperature)) return null;\n\n// const key = \"tempValues_\" + sensorId;\n// const values = flow.get(key) || [];\n// values.push(temperature);\n// flow.set(key, values);\n\n// const sensorIds = flow.get(\"activeSensorIds\") || [];\n// if (!sensorIds.includes(sensorId)) {\n//     sensorIds.push(sensorId);\n//     flow.set(\"activeSensorIds\", sensorIds);\n// }\n\n// return null;\n\nconst sensorId = msg.sensorId;\nconst temperature = msg.temperature;\n\nconst key = \"tempValues_\" + sensorId;\nconst values = flow.get(key) || [];\nvalues.push(temperature);\nflow.set(key, values);\n\nconst sensorIds = flow.get(\"activeSensorIds\") || [];\nif (!sensorIds.includes(sensorId)) {\n    sensorIds.push(sensorId);\n    flow.set(\"activeSensorIds\", sensorIds);\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "540acde518bc55f3",
+        "type": "inject",
+        "z": "98080d677c245485",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "59e165a2019e28b5"
+            ]
+        ]
+    },
+    {
+        "id": "59e165a2019e28b5",
+        "type": "function",
+        "z": "98080d677c245485",
+        "name": "Calculate Average Temperature",
+        "func": "const sensorIds = flow.get(\"activeSensorIds\") || [];\n\nif (sensorIds.length === 0) return null;\n\nconst messages = [];\n\nfor (const sensorId of sensorIds) {\n    const key = \"tempValues_\" + sensorId;\n    const values = flow.get(key) || [];\n    if (values.length === 0) continue;\n    const avg = values.reduce((a, b) => a + b, 0) / values.length;\n    const avgRounded = Number(avg.toFixed(2));\n    flow.set(key, []);\n    messages.push({\n        topic: `node/${sensorId}/downsampled/thermometer/avg/temperature`,\n        payload: avgRounded\n    });\n}\n\nflow.set(\"activeSensorIds\", []);\n\nreturn messages.length > 0 ? messages : null;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "a85446d96a5e016b"
+            ]
+        ]
+    },
+    {
+        "id": "a85446d96a5e016b",
+        "type": "mqtt out",
+        "z": "98080d677c245485",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1f5229f7700c7237",
+        "x": 650,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "042a436e92322a79",
+        "type": "http request",
+        "z": "98080d677c245485",
+        "name": "Check DB",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "https://keep-flower-alive.onrender.com/api/device/getBySensorId",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 640,
+        "y": 120,
+        "wires": [
+            [
+                "eda36893622a6dd1"
+            ]
+        ]
+    },
+    {
+        "id": "f5ad3b0f61654b49",
+        "type": "function",
+        "z": "98080d677c245485",
+        "name": "Retrieve Data",
+        "func": "const parts = msg.topic.split(\"/\");\nmsg.sensorId = parts[1];\nmsg.temperature = Number(msg.payload);\nmsg.payload = { sensorId: msg.sensorId };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 120,
+        "wires": [
+            [
+                "042a436e92322a79",
+                "2e880c227a55cfd1"
+            ]
+        ]
+    },
+    {
+        "id": "eda36893622a6dd1",
+        "type": "function",
+        "z": "98080d677c245485",
+        "name": "function 1",
+        "func": "if (msg.statusCode === 404) {\n    return [msg, null];\n}\n\nconst device = msg.payload;\nif (!device.roomId) return [null, null];\n\n\nmsg.payload = { sensorId: msg.sensorId, value: msg.temperature };\nreturn [null, msg];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 120,
+        "wires": [
+            [
+                "c1a328a3d4b6418f"
+            ],
+            [
+                "9ad976af50354842"
+            ]
+        ]
+    },
+    {
+        "id": "c1a328a3d4b6418f",
+        "type": "function",
+        "z": "98080d677c245485",
+        "name": "Check Gateway Token",
+        "func": "const token = global.get(\"gatewayToken\");\nconst expiry = global.get(\"gatewayTokenExp\");\n\nif (token && expiry && Date.now() < expiry) {\n    msg.token = token;\n    return [msg, null];\n}\n\nmsg.payload = {\n    secret: env.get(\"HOUSE_SECRET\"),\n};\n\nreturn [null, msg];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 80,
+        "wires": [
+            [
+                "2f3eb87715f614fe"
+            ],
+            [
+                "3fea8998792e565e"
+            ]
+        ]
+    },
+    {
+        "id": "3fea8998792e565e",
+        "type": "http request",
+        "z": "98080d677c245485",
+        "name": "Gateway Login",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://keep-flower-alive.onrender.com/api/house/gatewayLogin",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 960,
+        "y": 260,
+        "wires": [
+            [
+                "6ffccc4c5407d9ad"
+            ]
+        ]
+    },
+    {
+        "id": "6ffccc4c5407d9ad",
+        "type": "function",
+        "z": "98080d677c245485",
+        "name": "Store Gateway Token",
+        "func": "if (!msg.payload || !msg.payload.token) {\n    node.error(\"Gateway login failed: \" + JSON.stringify(msg.payload));\n    return null;\n}\nconst token = msg.payload.token;\nglobal.set(\"gatewayToken\", token);\nglobal.set(\"gatewayTokenExp\", Date.now() + 55 * 60 * 1000);\nmsg.token = token;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 260,
+        "wires": [
+            [
+                "2f3eb87715f614fe"
+            ]
+        ]
+    },
+    {
+        "id": "2f3eb87715f614fe",
+        "type": "function",
+        "z": "98080d677c245485",
+        "name": "Prepare Device Create Payload",
+        "func": "msg.headers = {\n    \"Content-Type\": \"application/json\",\n    \"Authorization\": \"Bearer \" + msg.token\n};\nmsg.payload = { sensorId: msg.sensorId };\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 120,
+        "wires": [
+            [
+                "ac364ceb5fd1a235"
+            ]
+        ]
+    },
+    {
+        "id": "ac364ceb5fd1a235",
+        "type": "http request",
+        "z": "98080d677c245485",
+        "name": "Register Device",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "body",
+        "url": "https://keep-flower-alive.onrender.com/api/device/create",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1460,
+        "y": 200,
+        "wires": [
+            [
+                "0376a00598e7e0d8"
+            ]
+        ]
+    },
+    {
+        "id": "0376a00598e7e0d8",
+        "type": "debug",
+        "z": "98080d677c245485",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1660,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2e880c227a55cfd1",
+        "type": "debug",
+        "z": "98080d677c245485",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7b7ebfb61bc60c82",
+        "type": "mqtt in",
+        "z": "c52bfddb800235a9",
+        "name": "MQTT In",
+        "topic": "node/+/downsampled/thermometer/avg/temperature",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "1f5229f7700c7237",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "c97e6a269b97f4ec"
+            ]
+        ]
+    },
+    {
+        "id": "c97e6a269b97f4ec",
+        "type": "function",
+        "z": "c52bfddb800235a9",
+        "name": "Extract Measurement",
+        "func": "const topicParts = msg.topic.split(\"/\");\n// topic: node/{sensorId}/downsampled/thermometer/avg/temperature\nif (topicParts.length < 6) {\n    node.warn(\"Invalid topic: \" + msg.topic);\n    return null;\n}\n\nconst sensorId = topicParts[1];\nconst temperature = Number(msg.payload);\n\nif (Number.isNaN(temperature)) {\n    node.warn(\"Invalid temperature\");\n    return null;\n}\n\nconst measuredAt = new Date().toISOString();\n\nmsg.measurementPayload = {\n    sensorId,\n    temperature,\n    measuredAt\n};\nmsg.measurementId = sensorId +'_'+ measuredAt\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "fb49424b7f85176d"
+            ]
+        ]
+    },
+    {
+        "id": "fb49424b7f85176d",
+        "type": "function",
+        "z": "c52bfddb800235a9",
+        "name": "Check Gateway Token",
+        "func": "const token = global.get(\"gatewayToken\");\nconst expiry = global.get(\"gatewayTokenExp\");\n\nif (token && expiry && Date.now() < expiry) {\n    msg.token = token;\n    return [msg, null];\n}\n\nmsg.payload = {\n    secret: env.get(\"HOUSE_SECRET\"),\n};\n\nreturn [null, msg];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 60,
+        "wires": [
+            [
+                "2ea76f7124195499"
+            ],
+            [
+                "f8f495ff65cdd2eb"
+            ]
+        ]
+    },
+    {
+        "id": "f8f495ff65cdd2eb",
+        "type": "http request",
+        "z": "c52bfddb800235a9",
+        "name": "Gateway Login",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://keep-flower-alive.onrender.com/api/house/gatewayLogin",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 260,
+        "y": 180,
+        "wires": [
+            [
+                "c1141a0f6c05d4c1"
+            ]
+        ]
+    },
+    {
+        "id": "c1141a0f6c05d4c1",
+        "type": "function",
+        "z": "c52bfddb800235a9",
+        "name": "Store Gateway Token",
+        "func": "if (!msg.payload || !msg.payload.token) {\n    node.error(\"Gateway login failed: \" + JSON.stringify(msg.payload));\n    return null;\n}\nconst token = msg.payload.token;\nglobal.set(\"gatewayToken\", token);\nglobal.set(\"gatewayTokenExp\", Date.now() + 55 * 60 * 1000);\nmsg.token = token;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "2ea76f7124195499"
+            ]
+        ]
+    },
+    {
+        "id": "2ea76f7124195499",
+        "type": "function",
+        "z": "c52bfddb800235a9",
+        "name": "Prepare Measurement Payload",
+        "func": "msg.headers = {\n    \"Content-Type\": \"application/json\",\n    \"Authorization\": \"Bearer \" + msg.token\n};\nmsg.payload = msg.measurementPayload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 120,
+        "wires": [
+            [
+                "ec6555df5a03cf35"
+            ]
+        ]
+    },
+    {
+        "id": "ec6555df5a03cf35",
+        "type": "http request",
+        "z": "c52bfddb800235a9",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://keep-flower-alive.onrender.com/api/measurement/create",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 320,
+        "wires": [
+            [
+                "9507b14167b545f8",
+                "1beb65da261f360f"
+            ]
+        ]
+    },
+    {
+        "id": "9507b14167b545f8",
+        "type": "function",
+        "z": "c52bfddb800235a9",
+        "name": "Check Backend Response",
+        "func": "const statusCode = msg.statusCode;\n\nif (statusCode >= 200 && statusCode < 300) {\n node.status({\n fill: \"green\",\n shape: \"dot\",\n text: \"sent to backend\"\n });\n\n return [msg, null];\n}\n\nnode.status({\n fill: \"red\",\n shape: \"ring\",\n text: \"backend failed, queueing\"\n});\n\nreturn [null, msg];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 320,
+        "wires": [
+            [
+                "88fd8fefe2c78d14"
+            ],
+            [
+                "88fd8fefe2c78d14",
+                "581ec497659fd1c7"
+            ]
+        ]
+    },
+    {
+        "id": "581ec497659fd1c7",
+        "type": "function",
+        "z": "c52bfddb800235a9",
+        "name": "Prepare SQLite Insert",
+        "func": "const payload = msg.measurementPayload;\n\nif (!payload) {\n node.warn(\"Missing measurementPayload, cannot queue\");\n return null;\n}\n\nconst payloadJson = JSON.stringify(payload).replace(/'/g, \"''\");\nconst measuredAt = new Date().toISOString();\nconst measurementId = msg.measurementId\n\nmsg.topic = `\nINSERT OR IGNORE INTO retry_queue (\n  measurementId,\n  payload,\n  measuredAt,\n  retryCount,\n  lastRetryAt\n)\nVALUES (\n  '${measurementId}',\n  '${payloadJson}',\n  '${measuredAt}',\n  0,\n  NULL\n);\n`;\n\nmsg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 380,
+        "wires": [
+            [
+                "f4a85b6ee224dfc5"
+            ]
+        ]
+    },
+    {
+        "id": "88fd8fefe2c78d14",
+        "type": "function",
+        "z": "c52bfddb800235a9",
+        "name": "Dashboard Backend Status",
+        "func": "if (msg.statusCode >= 200 &&\n    msg.statusCode < 300) {\n\n    msg.payload = \"ONLINE\";\n\n} else {\n\n    msg.payload = \"OFFLINE\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 4,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 320,
+        "wires": [
+            [
+                "8f0b23188385d750"
+            ]
+        ]
+    },
+    {
+        "id": "f4a85b6ee224dfc5",
+        "type": "sqlite",
+        "z": "c52bfddb800235a9",
+        "mydb": "aa11a45c3579292f",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SQLite Retry Queue",
+        "x": 1140,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f0b23188385d750",
+        "type": "ui_text",
+        "z": "c52bfddb800235a9",
+        "group": "57ff470b.93fdf8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Backend Status",
+        "label": "Backend Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1120,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1beb65da261f360f",
+        "type": "debug",
+        "z": "c52bfddb800235a9",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a87cf44838dde8a1",
+        "type": "inject",
+        "z": "cd0384401b063155",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "iso",
+        "payloadType": "date",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "999bff4747e1e119"
+            ]
+        ]
+    },
+    {
+        "id": "999bff4747e1e119",
+        "type": "function",
+        "z": "cd0384401b063155",
+        "name": "Create Retry Queue Table",
+        "func": "msg.topic = `\nCREATE TABLE IF NOT EXISTS retry_queue (\n    measurementId TEXT NOT NULL,\n    payload TEXT NOT NULL,\n    measuredAt TEXT NOT NULL,\n    retryCount INTEGER DEFAULT 0,\n    lastRetryAt TEXT\n);\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "7377d561eeb12d2a"
+            ]
+        ]
+    },
+    {
+        "id": "7377d561eeb12d2a",
+        "type": "sqlite",
+        "z": "cd0384401b063155",
+        "mydb": "aa11a45c3579292f",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SQLite Retry Queue",
+        "x": 660,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48773f815bdfcd2a",
+        "type": "inject",
+        "z": "1ad3d5903d2e6a7a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "facf6352652b6de2"
+            ]
+        ]
+    },
+    {
+        "id": "facf6352652b6de2",
+        "type": "function",
+        "z": "1ad3d5903d2e6a7a",
+        "name": "Select Retry Queue",
+        "func": "msg.topic = `\nSELECT * FROM retry_queue\nORDER BY measuredAt ASC\nLIMIT 10;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "9b9a540cf3e821d5"
+            ]
+        ]
+    },
+    {
+        "id": "90c5738669927960",
+        "type": "split",
+        "z": "1ad3d5903d2e6a7a",
+        "name": "Split Rows",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 750,
+        "y": 180,
+        "wires": [
+            [
+                "1f20e827f191a424"
+            ]
+        ]
+    },
+    {
+        "id": "1f20e827f191a424",
+        "type": "function",
+        "z": "1ad3d5903d2e6a7a",
+        "name": "Check Gateway Token",
+        "func": "const token = global.get(\"gatewayToken\");\nconst expiry = global.get(\"gatewayTokenExp\");\n\nif (token && expiry && Date.now() < expiry) {\n    msg.token = token;\n    return [msg, null];\n}\n\nmsg.payload = {\n    secret: env.get(\"HOUSE_SECRET\"),\n};\n\nreturn [null, msg];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "2df42fbcf2482aef"
+            ],
+            [
+                "cc962e8e6d4a9c6d"
+            ]
+        ]
+    },
+    {
+        "id": "cc962e8e6d4a9c6d",
+        "type": "http request",
+        "z": "1ad3d5903d2e6a7a",
+        "name": "Gateway Login",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://keep-flower-alive.onrender.com/api/house/gatewayLogin",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 260,
+        "y": 360,
+        "wires": [
+            [
+                "bb4fb18e2828dc75"
+            ]
+        ]
+    },
+    {
+        "id": "bb4fb18e2828dc75",
+        "type": "function",
+        "z": "1ad3d5903d2e6a7a",
+        "name": "Store Gateway Token",
+        "func": "if (!msg.payload || !msg.payload.token) {\n    node.error(\"Gateway login failed: \" + JSON.stringify(msg.payload));\n    return null;\n}\nconst token = msg.payload.token;\nglobal.set(\"gatewayToken\", token);\nglobal.set(\"gatewayTokenExp\", Date.now() + 55 * 60 * 1000);\nmsg.token = token;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [
+                "2df42fbcf2482aef"
+            ]
+        ]
+    },
+    {
+        "id": "2df42fbcf2482aef",
+        "type": "function",
+        "z": "1ad3d5903d2e6a7a",
+        "name": "Prepare Retry Payload",
+        "func": "const row = msg.payload;\n\nconst payload =\n    JSON.parse(row.payload);\n\nmsg.headers = {\n    \"Content-Type\": \"application/json\",\n    \"Authorization\": \"Bearer \" + msg.token\n};\n\nmsg.retryId = row.measurementId;\nmsg.payload = payload;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "08017b08ee775643"
+            ]
+        ]
+    },
+    {
+        "id": "08017b08ee775643",
+        "type": "http request",
+        "z": "1ad3d5903d2e6a7a",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://keep-flower-alive.onrender.com/api/measurement/create",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 260,
+        "wires": [
+            [
+                "9a24179a889d4253"
+            ]
+        ]
+    },
+    {
+        "id": "9a24179a889d4253",
+        "type": "function",
+        "z": "1ad3d5903d2e6a7a",
+        "name": "Delete Successful Retry",
+        "func": "if (msg.statusCode >= 200 &&\n    msg.statusCode < 300) {\n\n    msg.topic = `\n    DELETE FROM retry_queue\n    WHERE measurementId =\n    '${msg.retryId}';\n    `;\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 260,
+        "wires": [
+            [
+                "d8d6cea8c3443e42",
+                "12e51b837c2c7620"
+            ]
+        ]
+    },
+    {
+        "id": "9b9a540cf3e821d5",
+        "type": "sqlite",
+        "z": "1ad3d5903d2e6a7a",
+        "mydb": "aa11a45c3579292f",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SQLite Retry Queue",
+        "x": 540,
+        "y": 180,
+        "wires": [
+            [
+                "90c5738669927960"
+            ]
+        ]
+    },
+    {
+        "id": "d8d6cea8c3443e42",
+        "type": "sqlite",
+        "z": "1ad3d5903d2e6a7a",
+        "mydb": "aa11a45c3579292f",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SQLite Retry Queue",
+        "x": 900,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12e51b837c2c7620",
+        "type": "debug",
+        "z": "1ad3d5903d2e6a7a",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4c1b0bd19f6f6ce5",
+        "type": "inject",
+        "z": "7656f99e067445ba",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "c383c1b8e2d3a6b1"
+            ]
+        ]
+    },
+    {
+        "id": "c383c1b8e2d3a6b1",
+        "type": "function",
+        "z": "7656f99e067445ba",
+        "name": "Get Queue Size",
+        "func": "msg.topic = `\nSELECT COUNT(*) as count\nFROM retry_queue;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 100,
+        "wires": [
+            [
+                "89d0eb7f5f0adf8a"
+            ]
+        ]
+    },
+    {
+        "id": "2401b01946c6768d",
+        "type": "function",
+        "z": "7656f99e067445ba",
+        "name": "Format Queue Count",
+        "func": "msg.payload =\n    msg.payload[0].count;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 100,
+        "wires": [
+            [
+                "87f78c667326d847"
+            ]
+        ]
+    },
+    {
+        "id": "2732a816879a2f40",
+        "type": "mqtt in",
+        "z": "7656f99e067445ba",
+        "name": "",
+        "topic": "node/+/thermometer/+/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1f5229f7700c7237",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 320,
+        "wires": [
+            [
+                "31f68aece071bf8f"
+            ]
+        ]
+    },
+    {
+        "id": "31f68aece071bf8f",
+        "type": "function",
+        "z": "7656f99e067445ba",
+        "name": "function 2",
+        "func": "const temperature = Number(msg.payload);\n\nif (Number.isNaN(temperature)) {\n    return null;\n}\n\nmsg.payload = temperature.toFixed(1) + \" °C\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 320,
+        "wires": [
+            [
+                "b7f6ae34dc04d176"
+            ]
+        ]
+    },
+    {
+        "id": "89d0eb7f5f0adf8a",
+        "type": "sqlite",
+        "z": "7656f99e067445ba",
+        "mydb": "aa11a45c3579292f",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SQLite Retry Queue",
+        "x": 660,
+        "y": 100,
+        "wires": [
+            [
+                "2401b01946c6768d"
+            ]
+        ]
+    },
+    {
+        "id": "87f78c667326d847",
+        "type": "ui_text",
+        "z": "7656f99e067445ba",
+        "group": "57ff470b.93fdf8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Retry Queue Size",
+        "label": "Retry Queue Size",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1150,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b7f6ae34dc04d176",
+        "type": "ui_text",
+        "z": "7656f99e067445ba",
+        "group": "57ff470b.93fdf8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Last Temperature",
+        "label": "Last Temperature",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "className": "",
+        "x": 710,
+        "y": 320,
+        "wires": []
+    }
+]
