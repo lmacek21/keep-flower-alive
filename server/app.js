@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 require("dotenv").config();
 app.use(express.json());
@@ -21,6 +24,10 @@ app.use("/api/room", require("./controllers/room.controller"));
 app.use("/api/flower", require("./controllers/flower.controller"));
 app.use("/api/device", require("./controllers/device.controller"));
 app.use("/api/measurement", require("./controllers/measurement.controller"));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
+});
 
 app.listen(process.env.PORT, () =>
   console.log(`App runs on port: ${process.env.PORT}`),
