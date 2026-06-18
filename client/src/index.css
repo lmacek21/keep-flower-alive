@@ -1,0 +1,90 @@
+:root {
+  --c-white: #ffffff;
+  --c-green: #2e8050;
+  --c-dark-green: #205a34;
+  --c-light: #f2f8ef;
+  --c-mid-green: #4aa872;
+  --c-black: #090d07;
+
+  font:
+    16px/1.5 system-ui,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  color: var(--c-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: var(--c-light);
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* ── shared button style ── */
+.btn-app {
+  background-color: var(--c-green);
+  color: var(--c-white);
+  border: none;
+}
+.btn-app:hover,
+.btn-app:focus {
+  background-color: var(--c-dark-green);
+  color: var(--c-white);
+}
+.btn-app:disabled {
+  background-color: var(--c-mid-green);
+  color: var(--c-white);
+}
+.btn-app-outline {
+  background-color: transparent;
+  color: var(--c-dark-green);
+  border: 1px solid var(--c-dark-green);
+}
+.btn-app-outline:hover,
+.btn-app-outline:focus {
+  background-color: var(--c-mid-green);
+  color: var(--c-white);
+}
+
+/* ── thin themed scrollbar ── */
+.scroll-thin {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-mid-green) transparent;
+}
+.scroll-thin::-webkit-scrollbar {
+  width: 4px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background-color: var(--c-mid-green);
+  border-radius: 4px;
+}
+
+/* ── shared link color ── */
+a {
+  color: var(--c-dark-green);
+}
+a:hover {
+  color: var(--c-green);
+}
