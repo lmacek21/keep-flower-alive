@@ -25,7 +25,7 @@ app.use("/api/flower", require("./controllers/flower.controller"));
 app.use("/api/device", require("./controllers/device.controller"));
 app.use("/api/measurement", require("./controllers/measurement.controller"));
 
-app.get("*", (req, res) => {
+app.get("/{*path}", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
