@@ -391,7 +391,7 @@ export default function HousePage() {
                       className="list-group-item d-flex justify-content-between align-items-center"
                     >
                       <div>
-                        <div className="fw-semibold">{d.sensorId}</div>
+                        <div className="fw-semibold">Sensor: {d.sensorId}</div>
                         {connectedHere && (
                           <small className="text-success">
                             Connected to this room
