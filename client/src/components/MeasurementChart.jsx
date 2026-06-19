@@ -64,6 +64,26 @@ export default function MeasurementChart({
       ? buildColoredSeries(timedMeasurements, effectiveMin, effectiveMax)
       : timedMeasurements;
 
+  const domainStart = queriedRange
+    ? queriedRange.start
+    : chartData.length > 0
+      ? chartData[0].time
+      : null;
+  const domainEnd = queriedRange
+    ? queriedRange.end
+    : chartData.length > 0
+      ? chartData[chartData.length - 1].time
+      : null;
+  const midnights = [];
+  if (domainStart != null && domainEnd != null) {
+    const d = new Date(domainStart);
+    d.setHours(24, 0, 0, 0);
+    while (d.getTime() <= domainEnd) {
+      midnights.push(d.getTime());
+      d.setDate(d.getDate() + 1);
+    }
+  }
+
   return (
     <div className="card shadow-sm h-100">
       <div
@@ -160,6 +180,23 @@ export default function MeasurementChart({
                   />
                 ),
               ])}
+              {midnights.map((t) => (
+                <ReferenceLine
+                  key={`midnight-${t}`}
+                  x={t}
+                  stroke="#aaa"
+                  strokeDasharray="3 3"
+                  label={{
+                    value: new Date(t).toLocaleDateString([], {
+                      month: "short",
+                      day: "numeric",
+                    }),
+                    position: "insideTopRight",
+                    fontSize: 11,
+                    fill: "#666",
+                  }}
+                />
+              ))}
             </LineChart>
           </ResponsiveContainer>
         )}
