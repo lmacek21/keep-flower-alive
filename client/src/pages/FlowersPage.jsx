@@ -132,7 +132,7 @@ export default function FlowersPage() {
         <h1 className="mb-0" style={{ color: "var(--c-dark-green)" }}>
           Flowers
         </h1>
-        <div className="d-flex gap-2">
+        <div className="d-flex gap-2 align-items-center">
           <input
             type="text"
             className="form-control"
