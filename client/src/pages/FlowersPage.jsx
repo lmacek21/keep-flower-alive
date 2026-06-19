@@ -128,18 +128,18 @@ export default function FlowersPage() {
 
   return (
     <div className="p-4">
-      <div className="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+      <div className="d-flex justify-content-between align-items-center mb-4">
         <h1 className="mb-0" style={{ color: "var(--c-dark-green)" }}>
           Flowers
         </h1>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="d-flex gap-2">
           <input
             type="text"
             className="form-control"
             placeholder="Search by name…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            style={{ minWidth: 120, maxWidth: 220 }}
+            style={{ width: 220 }}
           />
           {isSuperUser && (
             <button className="btn btn-app" onClick={() => setShowModal(true)}>
