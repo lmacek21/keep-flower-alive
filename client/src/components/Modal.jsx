@@ -2,7 +2,7 @@ export default function Modal({ title, onClose, children }) {
   return (
     <>
       <div className="modal show d-block" tabIndex="-1">
-        <div className="modal-dialog modal-dialog-centered">
+        <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-header">
               <h5

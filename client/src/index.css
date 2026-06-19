@@ -81,6 +81,26 @@ p {
   border-radius: 4px;
 }
 
+/* ── secret button ── */
+.btn-secret {
+  background-color: transparent;
+  border: none;
+  color: #ffc107;
+  padding: 0.25rem 0.4rem;
+}
+.btn-secret:hover,
+.btn-secret:focus {
+  color: #e0a800;
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+/* ── rooms scroll panel (only constrain height on md+ so mobile stacks freely) ── */
+@media (min-width: 768px) {
+  .rooms-scroll {
+    height: calc(100vh - 200px);
+  }
+}
+
 /* ── shared link color ── */
 a {
   color: var(--c-dark-green);

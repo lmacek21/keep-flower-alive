@@ -99,7 +99,7 @@ export default function StatsPage() {
 
   return (
     <div className="p-4">
-      <div className="d-flex align-items-center justify-content-between gap-3 mb-4">
+      <div className="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
         <div className="d-flex align-items-center gap-3">
           <button
             className="btn btn-app-outline btn-sm"

@@ -25,7 +25,8 @@ export default function MembersCard({ members, isOwner, onRemoveMember }) {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           style={{
-            width: 130,
+            minWidth: 60,
+            maxWidth: 130,
             backgroundColor: "var(--c-light)",
             border: "none",
           }}
